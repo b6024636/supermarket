@@ -10,6 +10,20 @@ String employeeID
 Date dateEmployed
 String taxCode
 String contract
+Manager manager
+TeamLeader teamLeader
+Shift shift
+Team teams
+
+static hasMany=[teams:Team]
+
+static belongsTo=[Team]
+
+String toString()
+{
+	return "$employeeID, $fullName"
+}
+
 
     static constraints = {
 	fullName blank:false, nullable:false
@@ -19,6 +33,10 @@ String contract
 	employeeID blank:false, nullable:false, unique:true
 	dateEmployed blank:false, nullable:false
 	taxCode blank:false, nullable:false, maxSize:5
-	contract blank:false, nullable:false
+	contract blank:false, nullable:false, inList:["Full-Time", "Part-Time"]
+	manager blank:true, nullable:true
+	teamLeader blank:true, nullable:true
+	shift blank:true, nullable:true
+	teams blank:true, nullable:true
     }
 }

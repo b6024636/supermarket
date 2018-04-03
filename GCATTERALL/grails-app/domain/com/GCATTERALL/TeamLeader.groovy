@@ -8,6 +8,12 @@ String sectionName
 Long officePhone
 String leaderEmail
 String password
+Manager manager
+
+String toString()
+{
+	return "$employeeID, $fullName"
+}
 
     static constraints = {
 	fullName blank:false, nullable:false
@@ -17,5 +23,6 @@ String password
 	officePhone blank:false, nullable:false
 	leaderEmail blank:false, nullable:false, email:true
 	password blank:false, nullable:false
+	manager blank:true, nullable:true
     }
 }

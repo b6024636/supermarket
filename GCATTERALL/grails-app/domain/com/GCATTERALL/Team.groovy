@@ -7,6 +7,8 @@ int numberOfEmployees
 String sectionName
 String description
 
+
+
     static constraints = {
 	teamName blank:false, nullable:false
 	numberOfEmployees blank:false, nullable:false
