@@ -60,6 +60,44 @@ class BootStrap {
 		startingTime: '8:00pm'
 		).save()
 
+
+
+	//Team
+	def tmGard = new com.GCATTERALL.Team(
+		teamName:'Gardening',
+		numberOfEmployees: 10,
+		sectionName: 'Gardening',
+		description: 'Maintaining gardens'
+		).save()
+	
+	def tmStock = new com.GCATTERALL.Team(
+		teamName:'Stock Maintenance',
+		numberOfEmployees: 2,
+		sectionName: 'Warehouse',
+		description: 'Maintaining stock levels'
+		).save()
+
+	//Task
+	def taskReplenish = new com.GCATTERALL.Task(
+		taskName: 'Replenishing',
+		numberOfPeople: 2,
+		sectionName: 'Warehouse',
+		department: 'Stock Workers',
+		timeRequired: '1 Hour',
+		description: 'Stack shelves',
+		taskCompleted: false
+		).save()
+
+	def taskClean = new com.GCATTERALL.Task(
+		taskName: 'Cleaning',
+		numberOfPeople: 4,
+		sectionName: 'Shop Floor',
+		department: 'Cleaning Staff',
+		timeRequired: '4 Hours',
+		description: 'Clean the supermarket',
+		taskCompleted: true
+		).save()
+	
 	//Employee
 	def empCraig = new com.GCATTERALL.Employee(
 		fullName: 'Craig David',
@@ -100,47 +138,13 @@ class BootStrap {
 		contract: 'Part-Time',
 		manager:manSteveCross,
 		teamLeader:tlJohn,
-		shift:sftAfternoon
+		shift:sftMorn
 		).save(failOnError:true)
 
-	//Team
-	def tmGard = new com.GCATTERALL.Team(
-		teamName:'Gardening',
-		numberOfEmployees: 10,
-		sectionName: 'Gardening',
-		description: 'Maintaining gardens'
-		).save()
-	
-	def tmStock = new com.GCATTERALL.Team(
-		teamName:'Stock Maintenance',
-		numberOfEmployees: 2,
-		sectionName: 'Warehouse',
-		description: 'Maintaining stock levels'
-		).save()
-
-	//Task
-	def taskReplenish = new com.GCATTERALL.Task(
-		taskName: 'Replenishing',
-		numberOfPeople: 2,
-		sectionName: 'Floral',
-		department: 'Gardening',
-		timeRequired: '1 Hour',
-		description: 'Replenishing flowers',
-		taskCompleted: false
-		).save()
-
-	def taskClean = new com.GCATTERALL.Task(
-		taskName: 'Cleaning',
-		numberOfPeople: 4,
-		sectionName: 'Shop Floor',
-		department: 'Cleaning Staff',
-		timeRequired: '4 Hours',
-		description: 'Clean the supermarket',
-		taskCompleted: true
-		).save()
-	
 	empCraig.addToTeams(tmStock)
 	empTyler.addToTeams(tmStock)
+	empCharlie.addToTeams(tmClean)
+	
 	
     }
     def destroy = {
