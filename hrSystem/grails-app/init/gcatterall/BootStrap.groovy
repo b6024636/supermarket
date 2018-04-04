@@ -63,11 +63,11 @@ class BootStrap {
 
 
 	//Team
-	def tmGard = new com.GCATTERALL.Team(
-		teamName:'Gardening',
-		numberOfEmployees: 10,
-		sectionName: 'Gardening',
-		description: 'Maintaining gardens'
+	def tmCleaners = new com.GCATTERALL.Team(
+		teamName:'Cleaners',
+		numberOfEmployees: 1,
+		sectionName: 'Shop floor',
+		description: 'Ensure the shop floor is kept clean'
 		).save()
 	
 	def tmStock = new com.GCATTERALL.Team(
@@ -143,8 +143,18 @@ class BootStrap {
 
 	empCraig.addToTeams(tmStock)
 	empTyler.addToTeams(tmStock)
-	empCharlie.addToTeams(tmClean)
-	
+	empCharlie.addToTeams(tmCleaners)
+	taskReplenish.addToEmployees(empCraig)
+	taskReplenish.addToEmployees(empTyler)
+	taskClean.addToEmployees(empCharlie)
+	taskReplenish.addToShifts(sftMorn)
+	taskReplenish.addToShifts(sftAfternoon)
+	taskClean.addToShifts(sftAfternoon)
+	tmStock.addToShifts(sftMorn)
+	tmStock.addToShifts(sftAfternoon)
+	tmCleaners.addToShifts(sftAfternoon)
+	tmStock.addToTasks(taskReplenish)
+	tmCleaners.addToTasks(taskClean)
 	
     }
     def destroy = {
