@@ -8,7 +8,7 @@ String managerEmail
 String office
 String department
 
-static hasMany=[employee:Employee, teamLeader:TeamLeader]
+static hasMany=[employees:Employee, teamLeaders:TeamLeader]
 
 String toString()
 {

@@ -7,6 +7,10 @@ String dayOfWeek
 int numberOfHours
 String startingTime
 
+static hasMany=[teams:Team, tasks:Task]
+
+static belongsTo=[Team, Task]
+
 String toString()
 {
 	return "$dayOfWeek - $timeOfDay - $numberOfHours -$startingTime"

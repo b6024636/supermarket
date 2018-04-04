@@ -9,7 +9,7 @@ String description
 
 static hasMany = [shifts:Shift, tasks:Task, employees:Employee]
 
-static belongsTo = [Shift, Employee, Task]
+static belongsTo = [Task, Employee, Shift]
 
 String toString()
 {

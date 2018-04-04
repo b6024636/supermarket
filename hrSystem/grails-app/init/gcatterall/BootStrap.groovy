@@ -25,9 +25,9 @@ class BootStrap {
 	//TeamLeader
 	def tlJohn = new com.GCATTERALL.TeamLeader(
 		fullName: 'John Leadfarmer',
-		department: 'Gardening',
-		employeeID: 'GarJL',
-		sectionName: 'Trees',
+		department: 'Stock Workers',
+		employeeID: 'swJL',
+		sectionName: 'Warehouse',
 		officePhone: '01111777',
 		leaderEmail: 'jleadfarmer@email.com',
 		password: 'secret2018',
@@ -36,9 +36,9 @@ class BootStrap {
 
 	def tlJoane = new com.GCATTERALL.TeamLeader(
 		fullName: 'Joane Leadfarmer',
-		department: 'Meat',
-		employeeID: 'MeatJL',
-		sectionName: 'Beef',
+		department: 'Cleaning Staff',
+		employeeID: 'csJL',
+		sectionName: 'Shop Floor',
 		officePhone: '01112777',
 		leaderEmail: 'jleadfarmer@email.com',
 		password: 'secret2018',
@@ -65,14 +65,14 @@ class BootStrap {
 	//Team
 	def tmCleaners = new com.GCATTERALL.Team(
 		teamName:'Cleaners',
-		numberOfEmployees: 1,
+		numberOfEmployees: 2,
 		sectionName: 'Shop floor',
 		description: 'Ensure the shop floor is kept clean'
 		).save()
 	
 	def tmStock = new com.GCATTERALL.Team(
 		teamName:'Stock Maintenance',
-		numberOfEmployees: 2,
+		numberOfEmployees: 3,
 		sectionName: 'Warehouse',
 		description: 'Maintaining stock levels'
 		).save()
@@ -80,7 +80,7 @@ class BootStrap {
 	//Task
 	def taskReplenish = new com.GCATTERALL.Task(
 		taskName: 'Replenishing',
-		numberOfPeople: 2,
+		numberOfPeople: 3,
 		sectionName: 'Warehouse',
 		department: 'Stock Workers',
 		timeRequired: '1 Hour',
@@ -90,7 +90,7 @@ class BootStrap {
 
 	def taskClean = new com.GCATTERALL.Task(
 		taskName: 'Cleaning',
-		numberOfPeople: 4,
+		numberOfPeople: 2,
 		sectionName: 'Shop Floor',
 		department: 'Cleaning Staff',
 		timeRequired: '4 Hours',
@@ -155,6 +155,8 @@ class BootStrap {
 	tmCleaners.addToShifts(sftAfternoon)
 	tmStock.addToTasks(taskReplenish)
 	tmCleaners.addToTasks(taskClean)
+
+	//empCraig.addToManagers(manSteveCross)
 	
     }
     def destroy = {

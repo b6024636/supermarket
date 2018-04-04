@@ -13,8 +13,6 @@ Team team
 
 static hasMany=[employees:Employee]
 
-static belongsTo=Manager
-
 String toString()
 {
 	return "$employeeID, $fullName"

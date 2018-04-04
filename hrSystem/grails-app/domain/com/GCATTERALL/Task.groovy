@@ -12,7 +12,7 @@ Boolean taskCompleted
 
 static hasMany=[teams:Team, employees:Employee, shifts:Shift]
 
-static belongsTo=[Team, Employee, Shift]
+static belongsTo=[Team, Employee]
 
 String toString()
 {
