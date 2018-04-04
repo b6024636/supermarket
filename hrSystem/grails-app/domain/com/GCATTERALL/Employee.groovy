@@ -16,7 +16,7 @@ Shift shift
 
 static hasMany=[teams:Team, tasks:Task]
 
-static belongsTo=[Team, Manager]
+static belongsTo=[Team, Task]
 
 String toString()
 {
