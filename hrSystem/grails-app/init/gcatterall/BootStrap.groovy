@@ -3,7 +3,7 @@ package gcatterall
 class BootStrap {
 
     def init = { servletContext ->
-	//Manager
+	/*//Manager
 	def manSteveCross= new com.GCATTERALL.Manager(
 		fullName:'Steve Crossbar',
 		userName:'scross',
@@ -157,7 +157,7 @@ class BootStrap {
 	tmCleaners.addToTasks(taskClean)
 
 	//empCraig.addToManagers(manSteveCross)
-	
+	*/
     }
     def destroy = {
     }
