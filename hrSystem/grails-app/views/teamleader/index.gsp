@@ -2,32 +2,26 @@
 <html>
     <head>
         <meta name="layout" content="main" />
-        <g:set var="entityName" value="${message(code: 'manager.label', default: 'Manager')}" />
+        <g:set var="entityName" value="${message(code: 'teamleader.label', default: 'Teamleader')}" />
         <title><g:message code="default.list.label" args="[entityName]" /></title>
     </head>
     <body>
-        <a href="#list-manager" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation>
+        <a href="#list-teamleader" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+        <div class="nav" role="navigation">
             <ul>
                 <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
                 <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
-	<!--<div class=" col-md-12">
-		<h3>Managers</h3>
-		<button type="button" class="btn btn-default">
-			<g:link controller="Manager" action="index">Show Manager</g:link>
-		</button>
-	</div>-->
-        <div id="list-manager" class="content scaffold-list" role="main">
+        <div id="list-teamleader" class="content scaffold-list" role="main">
             <h1><g:message code="default.list.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <f:table collection="${managerList}" />
+            <f:table collection="${teamleaderList}" />
 
             <div class="pagination">
-                <g:paginate total="${managerCount ?: 0}" />
+                <g:paginate total="${teamleaderCount ?: 0}" />
             </div>
         </div>
     </body>

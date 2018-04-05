@@ -4,9 +4,6 @@
     <meta name="layout" content="main"/>
     <title>HR System</title>
     <asset:stylesheet src="home.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -14,7 +11,7 @@
         <section class="row colset-2-its">
             <h1>Welcome to Architecture Market</h1>
 
-	    <div class="container">
+	    <!--<div class="container">
 		    <div class="row">
 			<div class=" col-md-2 classNav">
 				<h3>Managers</h3>
