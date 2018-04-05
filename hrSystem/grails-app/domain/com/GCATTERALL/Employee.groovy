@@ -23,6 +23,10 @@ String toString()
 	return "$employeeID, $fullName"
 }
 
+double calculateDailyWage(){
+	8*hourlyRate
+}
+
 
     static constraints = {
 	fullName blank:false, nullable:false
