@@ -11,7 +11,6 @@ String password
 Manager manager
 Team team
 
-static hasMany=[employees:Employee]
 
 String toString()
 {

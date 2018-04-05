@@ -25,12 +25,7 @@
             <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
                 <ul class="nav navbar-nav navbar-right">
                     <g:pageProperty name="page.nav" />
- 		    <li><g:link controller="Manager" action="index">Show Manager</g:link></li>
- 		    <li><g:link controller="TeamLeader" action="index">Show Team Leaders</g:link></li>
- 		    <li><g:link controller="Employee" action="index">Show Employees</g:link></li>
- 		    <li><g:link controller="Team" action="index">Show Teams</g:link></li>
- 		    <li><g:link controller="Shift" action="index">Show Shifts</g:link></li>
- 		    <li><g:link controller="Task" action="index">Show Tasks</g:link></li>		    	
+ 		    		    	
                 </ul>
             </div>
         </div>

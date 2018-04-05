@@ -9,9 +9,14 @@
         <a href="#show-employee" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                <li><g:link controller="Manager" action="index">Show Manager</g:link></li>
+ 		<li><g:link controller="TeamLeader" action="index">Show Team Leaders</g:link></li>
+ 		<li><g:link controller="Employee" action="index">Show Employees</g:link></li>
+ 		<li><g:link controller="Team" action="index">Show Teams</g:link></li>
+ 		<li><g:link controller="Shift" action="index">Show Shifts</g:link></li>
+ 		<li><g:link controller="Task" action="index">Show Tasks</g:link></li>
+                <li style='float:right;'><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                <li style='float:right;'><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
         <div id="show-employee" class="content scaffold-show" role="main">
